@@ -1,0 +1,13 @@
+prog3 is supposed to find the distance between two points on a plane given each point's x and y coordinates. The program
+is structured by first creating variables for the coordinates of each point, the differences between their x and y 
+coordinates, and finally the distance to print. The calculations are done later in the final steps of the program before the
+distance is finally printed. Functions pow() and sqrt() were used in these last steps which are from the cmath header file.
+
+To test the program for correctness, I tried testing combinations of positive and negative coordinates. I also tested cases
+for 0-valued coordinates and for cases where the coordinates are the same. I tested cases where the coordinates are integers
+or floats. To make sure the program's output was correct, I used an online distance formula calculator.
+
+The program failed when using non-numeric characters like "f" or "adfaf", and it also failed when given fractions written like
+"3/4" for example. The program would just fall through the first step in entering coordinates, prompting nothing for the 
+coordinates of the second point. The distance returned was always 0. I think the program fails in these cases because all
+variables are initialized as floats which do not accept strings or chars. 
