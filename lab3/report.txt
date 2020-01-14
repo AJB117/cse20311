@@ -1,0 +1,16 @@
+Patrick Soga
+Section 2 Lab 3
+22 September 2019
+Writeup: menucalc.cpp
+
+From a user's perspective, menucalc.cpp works by continuously asking for a choice (an integer 1-5) that corresponds to a mathematical operation or 
+exiting the program. The user inputs two operands and receives an answer before being prompted for a choice once again. The user cannot divide by 0,
+and it is assumed that the user is well-behaved and always enters integers.
+
+Internally, the program is split up into functions to help make main() easier to read. All math operations are enclosed in their own functions,
+and the repetitive printing portions of the program are put in their own functions as well. The text menu that the user interacts with is repeated
+until 5 is entered using a while loop that continues to prompt the user until choice equals 5. 
+
+To verify that the output of the program was correct, I tested positive and negative numbers (both ints and floats) for all operations and verified the results 
+using a calculator. I verified each case correponded to its operaor by testing every possible operator. I also tested for division by 0 which resulted in 
+prompting the user again for input, which was expected. I tested the persistence of the prompt by testing many operators multiple times in a single run.

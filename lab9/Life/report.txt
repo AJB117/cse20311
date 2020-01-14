@@ -1,0 +1,22 @@
+// Patrick Soga
+// Section 2 Lab 9
+// 17 November 2019
+// report.txt
+
+From a user's perspective, the program runs life.cpp works by asking for a user-provided character that dictates
+the program's behavior. The according options given to the user is creating a cell, deleting a cell, advancing
+the board, playing the board, and quitting the program. Upon playing the board, the user must use ctrl+c to stop
+the game. In the non-interactive mode (batch mode), the user can load in a text file that has instructions
+to add or remove cells or advance the board to load a board state instead of manually entering commands.
+
+Internally, the program uses functions for mundane tasks like prompting the user and guiding the user through
+the program. It also uses a class to model the board called "lifeboard.cpp" with its corresponding header
+file "lifeboard.h". Using utility functions, the board advances by drawing a new board with the positions
+of new cells dictated by the rules of the Game of Life based off of a reference board and then setting that
+reference board equal to the new board to continue the cycle. Each time the board is printed, the screen is
+cleared so that the user does not have to see multiple boards in the same terminal window.
+
+To verify that the program was correct, I loaded the sample glider.txt file to make sure that it was 
+behaving as expected. I tried other cellular automata as well and verified that they were behaving
+as expected. I also tried edge cases in user input such as when a coordinate is out of the board's bounds
+to verify that the program could handle invalid input.

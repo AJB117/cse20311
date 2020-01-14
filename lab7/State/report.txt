@@ -1,0 +1,18 @@
+Patrick Soga
+Section 2 Lab 7
+5 November 2019
+Writeup: statemain.cpp
+
+From a user's perspective, statemain.cpp works by continuously asking for a choice (an integer 1-6) that corresponds to a certain operation on a data file of states
+that the user supplies. Users begin the program by selecting a startup file (usstates.csv, for instance) in which state data is stored as comma-separated values.
+The program reads those data into a vector of State objects. Users can compare states' populations and founded dates, print a table of states with their respective
+percentages of the national population, list all states with their capitals, and find the representation ratio of a given state.
+
+Internally, the program is split into functions to help the overall program's readability. One fuction is assigned to each of the operations that the user can perform,
+and fuctions are assigned responsibility over the menu prompt and the decider based off of the user's input. For file i/o, iostream's ifstream was used. In terms of data structures
+used, all U.S. state data was stored into a vector of State objects using the State class where each object represents a certain U.S. state with fields such as
+name, population, founding date, etc. as well as getter, setter, and utility functions. Further, for swift compilation of dependencies, a prewritten Makefile was used.
+
+To verify that the output of the program was correct, I tried entering both valid and invalid responses into the program to see if any unexpected output was produced.
+For instance, I tried entering one or more nonexistent states to see if the program could accurately handle errors. For operations involving math, I hand-calculated 
+and verified values such as the percentage of the population comprised of Californians to verify that the table of percentages was correct. 

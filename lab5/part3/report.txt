@@ -1,0 +1,15 @@
+Patrick Soga
+Section 2 Lab 3
+16 October 2019
+Writeup: mysayings.cpp
+
+From a user's perspective, mysayings.cpp works by continuously asking for a choice (an integer 1-5) that corresponds to a certain operation on sayings or the sayings
+text file. Users begin the program by selecting a startup file (startup.txt is recommended if there the user has no startup file in mind) whose sayings are loaded
+into the text file. Users can then display, add, and save sayings as well as search for sayings that contain a certain substring. 
+
+Internally, the program is split up into functions to help the overall program's readability. startup(), menu(), and prompt() all cover initial and repetitive aspects
+of the program whereas display(), newSaying(), findString(), and saveSayings() all handle features of the program. For file i/o, iostream's ifstream and ofstream
+were used.
+
+To verify that the output of the program was correct, I tried every option with strings of varying length as well as saving to different save files and loading the contents
+of those files into the program on startup multiple times. No unexpected or unwanted behavior occurred. 

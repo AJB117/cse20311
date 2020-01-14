@@ -1,0 +1,12 @@
+Part 3 is purely hard-coded regarding the function, the domain, and the step size, so the user doesn't need to do anything except run the executable.
+
+Internally, the program works by using a step size to determine the value of the function at the specific point in the interval. The number of "#" signs
+is equal to the value of the function at the specific point multiplied by a dampener so that not too many are printed. Using setw(), the columns of "#" signs
+are kept in neat order to look like the actual function.
+
+Min and max values are found by first comparing values of the function to INFINITY and 0, respectively, to kick off recording the rolling min and max 
+values. Since any finite number is less than infinity, an arbitrary value can be set for an initial minimum. In the same way, any positive number is greater
+than 0, and since abs() turns argument positive, an arbitrary value can be set for an initial maximum.
+
+I verified that the program is correct by using a calculator to verify the min and max values according to various step sizes, and I verified the general shape 
+of the function by plotting it in Desmos.

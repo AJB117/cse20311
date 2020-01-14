@@ -1,0 +1,24 @@
+// Patrick Soga
+// Section 2 Lab 10
+// 26 November 2019
+// report.txt: crossword report
+
+From a user's perspective, the program works with three possible inputs: an interactive mode, an input file mode, and a input/output
+file mode. The interactive mode lets the user enter their custom words into the crossword, the input file mode lets the user use a
+custom file with words written in it as input for the program, and the input/output file mode lets the user use the input file mode
+while placing program output into a file of their choosing. Upon generating a crossword, they can use the clues to solve the
+crossword.
+
+Internally, the program works by generating an empty board, sanitizing and sorting the given words by length, and centering the 
+largest word in the middle of the board. After that, the instructions in the lab 10 website were strictly followed to ensure
+there were no words with fewer than 1 space between them. In order to determine where each word went on the board, information
+regarding where the previously placed words was recorded such as beginning character coordinates, word length, and orientation were
+placed in the 2D vector wordData. The various checking of valid words was done by navigating the methods in the board class
+implemented by board.cpp given by board.h. After placing as many words as possible, the remaining words are placed in a vector
+to be printed. ifstream was used to make file i/o possible. 
+
+I verified the correctness of the program by running some of the given examples and comparing output. Even though this program's
+output differed in certain respects, around the same number of words were able to be placed. This algorithm was strictly greedy,
+offering no optimization, picking the first available position in the soonest available word, so it is expected that this program's
+output is not the same as those provided. Beyond provided examples, I also verified correctness by looking at various boards generated
+and making sure as many words as possible were added to the puzzle while conforming to the crossword rules.
